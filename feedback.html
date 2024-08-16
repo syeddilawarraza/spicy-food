@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <script src="bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+<style>
+
+.container .col{
+ 
+background-color: orange;
+height: 100px;
+width: 100%;
+
+}
+
+.header{
+
+text-align: center;
+  font-family: fantasy;
+  padding-top: 2%;
+
+}
+
+.heading1{
+
+    background-color: orange;
+    text-align: center;
+    font-family: fantasy;
+    padding-bottom: 1%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    width: 40%;
+    margin-left: 28%;
+}
+
+    .star{
+  font-size: 30px;
+  cursor: pointer;
+  color: #020000;
+  
+  }
+  .checked {
+      color: rgb(255, 0, 0);
+  }
+
+  .feedback{
+    width: 100%;
+    max-width: 1080px;
+    background: rgb(160, 221, 244);
+    margin: 0 auto;
+    padding: 15px;
+    box-shadow: 1px 1px 16px rgba(0, 0, 0, 0.3);
+}
+
+span.scale-rating input[type=radio] {
+    position:absolute;
+      /* -webkit-appearance: none; */
+    opacity:0;
+    outline:0 !important;
+      border-right: 1px solid grey;
+      height:33px;
+   
+      margin: 0 5px 0 0;
+    
+    width: 100%;
+      float: left;
+    cursor:pointer;
+    z-index:3;
+  }
+  span.scale-rating label:hover{
+  background:#fddf8d;
+  }
+  span.scale-rating input[type=radio]:last-child{
+  border-right:0;
+  }
+  span.scale-rating label input[type=radio]:checked ~ label{
+      /* -webkit-appearance: none; */
+   
+      margin: 0;
+    background:#fddf8d;
+  }
+  span.scale-rating label:before
+  {
+    content:attr(value);
+      top: 7px;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      right: 0;
+      text-align: center;
+      vertical-align: middle;
+    z-index:2;
+  }
+
+  .choice {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 20px;
+    display: block;
+  }
+  span.scale-rating{
+  margin: 5px 0 15px;
+      display: inline-block;
+     
+      width: 100%;
+     
+  }
+  span.scale-rating>label {
+    position:relative;
+      /* -webkit-appearance: none; */
+    outline:0 !important;
+      border: 1px solid grey;
+      height:33px;
+      margin: 0 5px 0 0;
+    width: calc(10% - 7px);
+      float: left;
+    cursor:pointer;
+  }
+
+
+  span.scale-rating label {
+    position:relative;
+      /* -webkit-appearance: none; */
+    outline:0 !important;
+      height:33px;
+        
+      margin: 0 5px 0 0;
+    width: calc(10% - 7px);
+      float: left;
+    cursor:pointer;
+  }
+  .text{
+    background-color:gold;
+   
+  }
+
+</style>
+
+</head>
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+        <div class="col" >
+        
+        <h1 class="header">Vinegar Food</h1>
+        
+          </div>
+         </div>
+        </div>    
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item"id="dil">
+                <a class="nav-link active" aria-current="page" href="header.html">Home</a>
+              </li>
+       
+              <li class="nav-item"id="dil">
+                <a class="nav-link active" aria-current="page" href="gallery.html">Gallary</a>
+              </li>
+              <li class="nav-item"id="dil">
+                <a class="nav-link active" aria-current="page" href="About.html">About Us</a>
+              </li>
+       
+              <li class="nav-item"id="dil">
+                <a class="nav-link active" aria-current="page" href="award.html">Awards</a>
+                <li class="nav-item"id="dil">
+                    <a class="nav-link active" aria-current="page" href="catering.html">Catering</a>
+              </li>
+              <li class="nav-item dropdown"id="dil">
+                <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Meals
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="regular.html">Regular</a></li>
+                  <li><a class="dropdown-item" href="lunch.html">Lunch</a></li>
+                  <li><a class="dropdown-item" href="desert.html">Deserts</a></li>
+                  <li><a class="dropdown-item" href="snack.html">Snack</a></li>
+                  <li><a class="dropdown-item" href="beverages.html">Beverages</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item"id="dil">
+                <a class="nav-link active" aria-current="page" href="Recipes.html">Recipe </a>
+              </li>
+       
+              <li class="nav-item"id="dil">
+                <a class="nav-link active" aria-current="page" href="Contact.html">Contact Us</a>
+              </li>
+              <li class="nav-item"id="dil">
+                <a class="nav-link active" aria-current="page" href="#">Feedback</a>
+              </li>
+            </ul>
+    
+          </div>
+        </div>
+      </nav>
+
+    
+<h1 class="heading1">Feedback</h1>
+
+<div class="feedback">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid qui beatae 
+            tempore cum nobis voluptate deleniti expedita possimus debitis quidem. Lorem ipsum,
+             dolor sit amet consectetur adipisicing elit. Harum, dolorum.</p>
+ 
+        <h4>Please rate your service experience for the following parameters</h4>
+
+        <form method="post" action="#action-url">
+          <label>1. Your overall experience with us ?</label><br>
+
+          <div class="clearfix">
+            <input type="hidden" id="rating-1" value="0">
+            <span class="star star-1" onclick="rate(1, 1)"><i class="fa fa-star" ></i></span>
+            <span class="star star-1" onclick="rate(2, 1)"><i class="fa fa-star" ></i></span>
+            <span class="star star-1" onclick="rate(3, 1)"><i class="fa fa-star" ></i></span>
+            <span class="star star-1" onclick="rate(4, 1)"><i class="fa fa-star" ></i></span>
+            <span class="star star-1" onclick="rate(5, 1)"><i class="fa fa-star" ></i></span>
+        </div>
+
+          <div class="clear"></div>
+          <hr class="survey-hr">
+          <label>2. Friendliness and courtesy shown to you while recieving your food</label><br>
+          <div class="clearfix">
+            <input type="hidden" id="rating-2" value="0">
+            <span class="star star-2" onclick="rate(1, 2)"><i class="fa fa-star" ></i></span>
+            <span class="star star-2" onclick="rate(2, 2)"><i class="fa fa-star" ></i></span>
+            <span class="star star-2" onclick="rate(3, 2)"><i class="fa fa-star" ></i></span>
+            <span class="star star-2" onclick="rate(4, 2)"><i class="fa fa-star" ></i></span>
+            <span class="star star-2" onclick="rate(5, 2)"><i class="fa fa-star" ></i></span>
+        </div>
+
+
+          <div class="clear"></div>
+          <hr class="survey-hr">
+          <label>3. Friendliness and courtesy shown to you while delivery of your food</label><br><br />
+          <div style="color:grey">
+            <span style="float:left">
+              POOR
+            </span>
+            <span style="float:right">
+              BEST
+            </span>
+
+          </div>
+          <span class="scale-rating">
+            <label value="1">
+              <input type="radio" name="rating">
+              <label style="width:100%;"></label>
+            </label>
+            <label value="2">
+              <input type="radio" name="rating">
+              <label style="width:100%;"></label>
+            </label>
+            <label value="3">
+              <input type="radio" name="rating">
+              <label style="width:100%;"></label>
+            </label>
+            <label value="4">
+              <input type="radio" name="rating">
+              <label style="width:100%;"></label>
+            </label>
+            <label value="5">
+              <input type="radio" name="rating">
+              <label style="width:100%;"></label>
+            </label>
+            <label value="6">
+              <input type="radio" name="rating">
+              <label style="width:100%;"></label>
+            </label>
+            <label value="7">
+              <input type="radio" name="rating">
+              <label style="width:100%;"></label>
+            </label>
+            <label value="8">
+              <input type="radio" name="rating">
+              <label style="width:100%;"></label>
+            </label>
+            <label value="9">
+              <input type="radio" name="rating">
+              <label style="width:100%;"></label>
+            </label>
+            <label value="10">
+              <input type="radio" name="rating" value="10">
+              <label style="width:100%;"></label>
+            </label>
+          </span>
+
+
+          <div class="clear"></div>
+          <input style="background:#43a7d5;color:#fff;padding:12px;border:0" type="submit" value="Submit your review">
+        </form>
+      </div>
+<br>
+
+
+<!-- footer start -->
+
+<!-- Footer -->
+<footer class="text-center    text-muted" style="background-color: rgb(240, 240, 240); padding-top: 5%; "   >
+  <!-- Section: Social media -->
+  
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-dark text-uppercase fw-bold mb-4">
+            <i class="fas fa-gem me-3 text-dark"></i>Vineger Food
+          </h6>
+          <p>
+            Vinegar is an aqueous solution of acetic acid and trace compounds that may include flavorings.
+             Vinegar typically contains 5–8% 
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="text-dark col-md-2 col-lg-2 col-xl-2 mx-auto mb-4" >
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Products
+          </h6>
+      
+            <ul>
+           <li> <a href="header.html" class="text-reset text-dark ">Home</a> </li>
+          <br>
+
+           <li>  <a href="feedback.html" class="text-reset text-dark">Feedback</a> </li>
+          <br>
+
+           <li>  <a href="About.html" class="text-reset text-dark">About us</a> </li>
+          <br>
+
+           <li>  <a href="Contact.html" class="text-reset text-dark">Contact Us</a> </li>
+        <br>
+           <li> <a href="more.html" class="text-reset text-dark">More</a> </li>
+        </ul>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-dark text-uppercase fw-bold mb-4">Contact</h6>
+          <p><i class="fas fa-home me-3 text-secondary"></i> Gulshan-e-Maymar Karachi Pakistan</p>
+          <p>
+            <i class="fas fa-envelope me-3 text-secondary"></i>
+            vinegerfood@gmail.com
+          </p>
+          <p><i class="fas fa-phone me-3 text-secondary"></i> + 92 300 1234567</p>
+          <p><i class="fas fa-print me-3 text-secondary"></i> + 92 315 1234567</p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  
+  <section class="d-flex  justify-content-lg-between p-4 "  id="ftr">
+    <!-- Left -->
+    <!-- <div class=" d-none d-lg-block">
+      <span>Get connected with us on social networks:</span>
+    </div> -->
+    <!-- Left -->
+
+    <!-- Right -->
+    <div class="social">
+      <a href="https://www.facebook.com/login.php/"  class="me-4 link-secondary">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoiZW4ifQ%3D%3D%22%7D" class="me-4 link-secondary">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://www.google.com/" class="me-4 link-secondary" >
+        <i class="fab fa-google"></i>
+      </a>
+      <a href="https://www.instagram.com/?hl=en" class="me-4 link-secondary" >
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.linkedin.com/login" class="me-4 link-secondary" >
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://github.com/topics/login" class="me-4 link-secondary" >
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <!-- Right -->
+  </section>
+<div class="lastdiv" style=" height: 30px;">
+  
+</div>
+
+
+
+
+</footer>
+<!-- Footer -->
+
+    <!-- footer end -->
+
+
+
+</body>
+
+<script>
+    function rate(value, card) {
+    const ratingInput = document.querySelector(`#rating-${card}`);
+    ratingInput.value = value;
+    const stars = document.querySelectorAll(`.star-${card}`);
+    stars.forEach((star, index) => {
+      if (index < value) {
+        star.classList.add("checked");
+      } else {
+        star.classList.remove("checked");
+      }
+    });
+  }
+</script>
+
+</html>
